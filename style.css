@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  h1{
+    text-align: center;
+  }
+  .row {
+    max-width: 100%;
+    display: flex;
+    gap: 5px 5px;
+    padding: 5px;
+    flex: 1;
+  }
+  h3 {
+    border: 1px solid black;
+  }
+ .row > :nth-child(1) > :nth-child(1){
+    background-color: rgb(255, 163, 71);
+    padding: 5px 15px;
+    float:right;
+    overflow: hidden;
+    display: block;
+    width: fit-content;
+  }
+  .row > :nth-child(2) > :nth-child(1){
+    background-color: rgb(201, 91, 177);
+    color: white;
+    padding: 5px 15px;
+    float:right;
+    overflow: hidden;
+    display: block;
+    width: fit-content;
+  }
+  
+  .row > .block3 > .title {
+    background-color: rgb(252, 230, 210);
+    padding: 5px 15px;
+    float: right;
+    overflow: hidden;
+    display: block;
+    width: fit-content;
+  }
+  
+  .row > .block1 > :nth-child(2),
+  .row > .block2 > :nth-child(2),
+  .row > .block3 > :nth-child(2) {
+    margin-top: 40px;
+    padding: 10px;
+    max-height: 100%;
+    overflow: hidden;
+    display: block;
+    border: none;
+  }
+  
+  .row > .block1,
+  .row > .block2,
+  .row > .block3 {
+    background-color: rgb(255, 255, 181);
+    border: 1px solid black;
+  }
+  
+  @media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+     
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .row {
+        flex-wrap:wrap;
+    }
+    .block1, .block2 {
+        flex: 1 300px;
+    }
+    .block3 {  
+        flex: 2 300px;
+    }
+  }
+  
+  @media (min-width: 993px) {
+    .row {
+        flex: 1;
+        flex-flow: row;
+    }
+  }
